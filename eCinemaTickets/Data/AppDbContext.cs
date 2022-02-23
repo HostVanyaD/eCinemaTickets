@@ -2,6 +2,7 @@
 {
     using eCinemaTickets.Models;
     using Microsoft.EntityFrameworkCore;
+    using System.Threading.Tasks;
 
     public class AppDbContext : DbContext
     {

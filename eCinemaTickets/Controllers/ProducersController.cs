@@ -17,8 +17,7 @@
         {
             var allProducers = await _context.Producers.ToListAsync();
 
-            // TODO: add view and pass the list of producers
-            return View();
+            return View(allProducers);
         }
     }
 }

@@ -15,10 +15,9 @@
 
         public async Task<IActionResult> Index()
         {
-            var allMovies = await _context.Movies.ToListAsync();
+            var allMovies = await _context.Movies.Include(m => m.Cinema).OrderBy(m => m.Name).ToListAsync();
 
-            // TODO: Create the view and pass the movies list
-            return View();
+            return View(allMovies);
         }
     }
 }

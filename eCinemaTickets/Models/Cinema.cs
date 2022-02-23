@@ -8,6 +8,7 @@
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "Cinema logo")]
         public string Logo { get; set; }
 
         [Required]

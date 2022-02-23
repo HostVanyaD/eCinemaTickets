@@ -17,8 +17,7 @@
         {
             var allCinemas = await _context.Cinemas.ToListAsync();
 
-            // TODO: Create the view and pass the cinemas list
-            return View();
+            return View(allCinemas);
         }
     }
 }

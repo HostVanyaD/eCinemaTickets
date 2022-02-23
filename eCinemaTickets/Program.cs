@@ -1,4 +1,5 @@
 using eCinemaTickets.Data;
+using eCinemaTickets.Data.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
 // Add services to the container.
+builder.Services.AddScoped<IActorService, ActorService>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
